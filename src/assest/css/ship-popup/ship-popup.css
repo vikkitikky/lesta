@@ -62,3 +62,8 @@
 .ship-popup__description {
     grid-area: 4 / 1 / 5 / 5;
 }
+
+.ship-popup__type {
+    display: flex;
+    align-items: center;
+}

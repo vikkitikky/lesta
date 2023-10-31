@@ -38,7 +38,7 @@ const ShipPopup: React.FC<IProps> = ({
           <div>
             <p>Nation: {nation.title}</p>
             <p>Level: {level}</p>
-            <p>Type: {type.title}<img src={type.icons.default} alt={type.title}/></p>
+            <p className="ship-popup__type">Type: {type.title}<img src={type.icons.default} alt={type.title}/></p>
           </div>
         </div>
 
