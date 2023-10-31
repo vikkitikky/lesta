@@ -1,0 +1,7 @@
+.ships-list {
+    display: grid;
+    grid-template: auto/repeat(auto-fill, minmax(221px, 450px));
+    gap: 12px;
+    margin: 8px;
+    justify-content: center;
+}

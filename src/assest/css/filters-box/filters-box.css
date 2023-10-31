@@ -1,0 +1,31 @@
+.filters {
+    position: absolute;
+    backdrop-filter: blur(20px);
+    z-index: 999;
+    padding: 20px;
+    border: 1px solid #222731;
+    left: 0;
+    right: 0;
+    width: 80%;
+}
+
+.filters_hidden {
+    display: none;
+}
+
+.filters__box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filters__button {
+    width: 30%;
+    min-width: 90px;
+}
+
+@media screen and (min-width: 768px) {
+    .filters__box {
+        flex-direction: row;
+    }
+}

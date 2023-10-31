@@ -1,0 +1,89 @@
+.ship-card {
+    display: grid;
+    grid-template-rows: 80px 120px repeat(3, 60px);
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgba(19, 36, 66, 0.7);
+    align-items: center;
+    justify-items: center;
+    padding: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.ship-card__header {
+    grid-area: 1 / 1 / 2 / 4;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.ship-card__details {
+    display: flex;
+    align-items: center;
+}
+
+.ship-card__level {
+    margin: 0;
+}
+
+.ship-card__type-img {
+    width: 27px;
+    height: 27px;
+}
+
+.ship-card__nation-img {
+    grid-area: 2 / 1 / 5 / 3;
+    opacity: 0.7;
+    align-self: start;
+    justify-self: start;
+}
+
+.ship-card__image-wrap {
+    grid-area: 1 / 1 / 5 / 5;
+    z-index: 3;
+}
+
+.ship-card__image {
+    width: 100%;
+    height: auto;
+}
+
+.ship-card__more-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: 1 / 1 / 6 / 4;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+}
+
+.ship-card__description {
+    max-height: 80%;
+}
+
+.ship-card__button {
+    width: 100%;
+}
+
+.ship-card:hover > .ship-card__more-info {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px){
+    .ship-card__more-info {
+        grid-area: 5 / 1 / 6 / 4;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .ship-card__description {
+        display: none;
+    }
+}

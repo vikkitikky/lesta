@@ -1,0 +1,48 @@
+.filter__button {
+    cursor: pointer;
+    fill: lightgrey;
+    transition: fill 0.3s;
+    position: relative;
+}
+
+.filter__button:hover {
+    fill: white;
+}
+
+.filter__wrapper {
+
+}
+
+.filter__item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 8px;
+}
+
+.filter__color-mark {
+    width: 27px;
+    height: 16px;
+}
+
+.filter {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    .filter__label {
+        display: none;
+    }
+
+    .filter__label_level {
+        display: inline;
+    }
+
+    .filter {
+        flex-direction: row;
+    }
+}

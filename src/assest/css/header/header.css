@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    background-color: rgba(19, 36, 66, 0.7);
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+}
+
+.header__content {
+    width: 70%;
+}

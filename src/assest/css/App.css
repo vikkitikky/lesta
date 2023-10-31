@@ -1,0 +1,11 @@
+.App {
+    grid-area: content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto minmax(220px, 1200px) auto;
+    grid-template-rows: 56px auto;
+    grid-template-areas:
+    "header header header"
+    ". content .";
+    color: lightgrey;
+}
