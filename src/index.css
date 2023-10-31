@@ -1,13 +1,27 @@
+@import url(assest/css/normalize.css);
+@import url(assest/css/App.css);
+@import url(assest/css/header/header.css);
+@import url(assest/css/filter/filter.css);
+@import url(assest/css/filters-box/filters-box.css);
+@import url(assest/css/ships-list/ships-list.css);
+@import url(assest/css/ship-card/ships-card.css);
+@import url(assest/css/ship-page/ship-page.css);
+@import url(assest/css/button/button.css);
+@import url(assest/css/ship-popup/ship-popup.css);
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: Roboto Condensed,Arial,Helvetica Neue,Helvetica,sans-serif;
+    background-color: #222731;
+    height: 100vh;
+    background-image: url(https://wows-media-content.korabli.su/common-media-files/armory/background/main_background.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main {
+    height: calc(100vh - 56px);
+    grid-area: content;
 }
