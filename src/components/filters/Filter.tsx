@@ -18,7 +18,7 @@ const Filter: React.FC<IProps> = ({
                                   }) => {
   return (
     <fieldset id={id} className="filter">
-      {values.map((item, i) => (
+      {values.map((item) => (
         <div key={item.value} className="filter__item">
           <input className="filter__checkbox" value={item.value} id={item.value.toString()} type="checkbox"
                  onChange={onChange}/>

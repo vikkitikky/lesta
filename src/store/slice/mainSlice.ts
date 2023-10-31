@@ -2,6 +2,7 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {IShip} from '../../shared/types/IShip';
 import {IFilterValue} from '../../shared/types/IFilterValue';
 import _ from 'lodash';
+import {FilterKeys} from '../../shared/types/FilterKeys';
 
 interface IInitialState {
   list: IShip[];
@@ -16,9 +17,9 @@ const initialState: IInitialState = {
   listIsFiltered: false,
   isUpdate: true,
   filterState: {
-    'nation.name': [],
-    level: [],
-    'type.name': [],
+    [FilterKeys.Nation]: [],
+    [FilterKeys.Level]: [],
+    [FilterKeys.Type]: [],
   },
   activeFilter: [],
 };
@@ -33,7 +34,7 @@ const mainSlice = createSlice({
     updateFilter: (state, action: PayloadAction<{
       value: string | number,
       isSelected: boolean,
-      filterName: 'type.name' | 'nation.name' | 'level'
+      filterName: FilterKeys
     }>) => {
       const { value, filterName, isSelected } = action.payload;
       const newValues = [...state.filterState[filterName]];

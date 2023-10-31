@@ -5,7 +5,6 @@ import {updateFilter} from '../../store/slice/mainSlice';
 import useClickOutside from '../../shared/hooks/useClickOutside';
 import {FilterKeys} from '../../shared/types/FilterKeys';
 import {DataForFilters} from '../../shared/types/DataForFilters';
-import useFilter from '../../shared/hooks/useFilter';
 
 interface IProps {
   isOpen: boolean;
@@ -28,26 +27,26 @@ const FilterBox: React.FC<IProps> = ({
     onClose,
   });
 
-  const onSelect = (value: string | number, isSelected: boolean, filterName: FilterKeys.Level | FilterKeys.Type | FilterKeys.Nation) => {
+  const onSelect = (value: string | number, isSelected: boolean, filterName: FilterKeys) => {
     dispatch(updateFilter({
-      value: value,
-      filterName: filterName,
-      isSelected: isSelected,
+      value,
+      filterName,
+      isSelected,
     }));
   };
 
   return (
     <div className={isOpen ? 'filters' : 'filters_hidden'} ref={boxRef}>
       <div className="filters__box">
-        <Filter id={'level'} values={level}
+        <Filter id={FilterKeys.Level} values={level}
                 onChange={(e) => {
                   onSelect(Number(e.target.value), e.target.checked, FilterKeys.Level);
                 }}/>
-        <Filter id={'nation.name'} values={nation}
+        <Filter id={FilterKeys.Type} values={type}
                 onChange={(e) => {
                   onSelect(e.target.value, e.target.checked, FilterKeys.Type);
                 }}/>
-        <Filter id={'type.name'} values={type}
+        <Filter id={FilterKeys.Nation} values={nation}
                 onChange={(e) => {
                   onSelect(e.target.value, e.target.checked, FilterKeys.Nation);
                 }}/>

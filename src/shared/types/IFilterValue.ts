@@ -1,5 +1,7 @@
+import {FilterKeys} from './FilterKeys';
+
 export interface IFilterValue {
-  'level': number[];
-  'nation.name': string[];
-  'type.name': string[];
+  [FilterKeys.Level]: number[];
+  [FilterKeys.Nation]: string[];
+  [FilterKeys.Type]: string[];
 }
